@@ -2,8 +2,10 @@ const render = (state) => {
     const circlesDOM = document.getElementById('circlesContainer');
 
     var circlesHTML = state.map(function (circle) {
+        console.log(circle.radius)
         return `
             <div style="width: ${circle.radius * 2}px; height: ${circle.radius * 2}px; border-radius: ${circle.radius}px; background-color: ${circle.color};"></div>
+
         `
     });
 

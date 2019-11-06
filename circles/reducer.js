@@ -14,7 +14,7 @@ const initialState = [
     {
         radius: 10,
         color: "#000000"
-    },
+    }
 ];
 
 const reducer = (state = initialState, action) => {
@@ -22,6 +22,16 @@ const reducer = (state = initialState, action) => {
     const { type } = action;
 
     // ACTION: Add a random circle
+
+    if (type === "CREATE CIRCLE") {
+        return [
+            ...state,
+            {
+                radius: Math.floor(Math.random() * 90),
+                color: '#' + parseInt(Math.random() * 0xffffff).toString(16)
+            }
+        ]
+    }
 
     return state;
 }
