@@ -9,5 +9,13 @@ const reducer = (state = initialState, action) => {
 
     // Add a Name Tag
 
+    if (type === "CHANGE TO INPUT VALUE") {
+        return [
+            ...state,
+            newNametag[0].value
+        ]
+    }
+
+
     return state;
 }
